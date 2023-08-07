@@ -363,6 +363,7 @@ export default function CommonTable(props: { employeeData: Employees[] }) {
                     id={selectedId}
                     handleClose={() => {
                         openModal(false, "isAddEditDialogOpen")
+                        setSelectedId(null);
                     }}
                 />
             )}
@@ -371,7 +372,7 @@ export default function CommonTable(props: { employeeData: Employees[] }) {
                     open={isDialog.isDeleteDialogOpen}
                     handleClose={() => {
                         openModal(false, "isDeleteDialogOpen");
-                        setClicked(null)
+                        setClicked(null);
                         setSelected([]);
                     }}
                     clickedData={clicked}
